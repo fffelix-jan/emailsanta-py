@@ -62,11 +62,11 @@ class SantaEmail:
 
         :param country: The name of the sender's country as a string.
 
-        :param good: How good the sender has been this year as an integer.
-        `0` denotes "my halo has been to the repair shop a few times".
-        `1` denotes "I should still be on the 'Nice' list!"
-        `2` denotes "my halo is just a little bit crooked!!"
-        `3` denotes "I should be the angel at the top of the tree!"
+        :param good: How good the sender has been this year as an integer.  
+        `0` denotes "my halo has been to the repair shop a few times".  
+        `1` denotes "I should still be on the 'Nice' list!"  
+        `2` denotes "my halo is just a little bit crooked!!"  
+        `3` denotes "I should be the angel at the top of the tree!"  
         Any other value will raise a ValueError.
 
         :param present1: The sender's first present request as a string.
@@ -79,13 +79,13 @@ class SantaEmail:
         :param stamp: Chooses a graphical "stamp" on the letter. As this library
         removes any images in Santa's response, changing this does not have any
         effect in this library. The choice, as an integer, can be one of four
-        choices:
-        `1` - "HO! HO! HO! It's Santa on a stamp!" (default)
-        `2` - "Frosty always thought his nose looked too big in this photo!"
+        choices:  
+        `1` - "HO! HO! HO! It's Santa on a stamp!" (default)  
+        `2` - "Frosty always thought his nose looked too big in this photo!"  
         `3` - "Rudolph had trouble keeping his nose from glowing too brightly so
-        the picture would turn out!"
-        `4` - "Mrs. Claus is always smiling!"
-        Any other value will raise a ValueError.
+        the picture would turn out!"  
+        `4` - "Mrs. Claus is always smiling!"  
+        Any other value will raise a ValueError.  
         Defaults to stamp `1`.
 
         :param email: The sender's email. If the sender appears to be in crisis,
@@ -112,7 +112,7 @@ class SantaEmail:
         else:
             raise TypeError("gender must be an integer that is either 1 or 2")
 
-        if isinstance(age, int):
+        if isinstance(age, int) or isinstance(age, float):
             if age < 0:
                 raise ValueError("age cannot be less than 0")
             else:
