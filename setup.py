@@ -1,6 +1,8 @@
 from setuptools import setup, find_packages
 import pathlib
 
+GITHUB_URL = "https://github.com/fffelix-jan/emailsanta-py"
+
 setup(
     name="emailsanta",
     version="1.0.0",
@@ -10,7 +12,14 @@ setup(
     long_description=(pathlib.Path(__file__).parent / "README.md").read_text(),
     long_description_content_type="text/markdown",
     install_requires=["bs4", "html2text", "requests"],
-    url="https://github.com/fffelix-jan",
+    url=GITHUB_URL,
     author="Félix An",
-    author_email="fffelix.jan.yt@gmail.com"
+    author_email="fffelix.jan.yt@gmail.com",
+    python_requires=">= 3.5",
+        project_urls={
+        "Documentation": GITHUB_URL,
+        "Funding": "https://www.felixan.tk",
+        "Source": GITHUB_URL,
+        "Tracker": "{}/issues".format(GITHUB_URL),
+    },
 )

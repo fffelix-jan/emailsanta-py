@@ -7,4 +7,4 @@ __copyright__ = "Copyright (c) 2020 Félix An."
 __credits__ = ["emailSanta.com", "Alan Kerr"]
 __license__ = "AGPL"
 
-from emailsanta import emailsanta
+from emailsanta.emailsanta import *
