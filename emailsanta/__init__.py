@@ -1,0 +1,1 @@
+from emailsanta import __main__
