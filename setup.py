@@ -5,7 +5,7 @@ GITHUB_URL = "https://github.com/fffelix-jan/emailsanta-py"
 
 setup(
     name="emailsanta",
-    version="1.0.0",
+    version="1.0.1",
     packages=find_packages(exclude=["tests*"]),
     license="AGPLv3",
     description="Python module to simulate emailing the legendary Christmas character Santa, powered by Alan Kerr's emailSanta.com.",
