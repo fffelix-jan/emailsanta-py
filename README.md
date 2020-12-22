@@ -1,10 +1,12 @@
 # emailsanta
- A Python library to "send a letter to Santa" using emailsanta.com and receive a properly-formatted automated reply "as fast as reindeer fly"!  
+ A Python library to "send a letter to Santa" using emailSanta.com and receive a properly-formatted automated reply "as fast as reindeer fly"!  
 
  Licensed under AGPL 3.0.  
  Reminder: If you use this library in a Discord bot or any other network application, you have to disclose the source code, even if the bot is accessed over the Internet. 
 
  Any data submitted will be processed by emailSanta.com in accordance to [their privacy policy](https://www.emailsanta.com/privacy.asp). I, Félix An, am not responsible for the processing of the data.
+
+ Disclaimer: Santa Claus is not real. This library and emailSanta.com are for entertainment purposes only.
 ## Installing
  Install using pip:  
  ```
@@ -21,6 +23,7 @@
  To prepare an email to "send to Santa", create an instance of `SantaEmail`, and fill in the arguments.  
 
  Required arguments:  
+
 `firstname` - The sender's first name as a string. The first letter
 of the name will automatically be capitalized by the server if not
 already capitalized.
@@ -54,6 +57,17 @@ Any other value will raise a ValueError.
 
 Optional arguments:  
 
+`comment` - An additional message to Santa from the sender as a string.
+Defaults to empty.
+
+`consent` - Whether or not the sender consents to his/her comments
+being shared here: https://www.emailsanta.com/read_santa_letters.asp,
+as a boolean. Defaults to ``False`` (the letter will not be shared publicly.)
+
+`email` - The sender's email. If the sender appears to be in crisis,
+the staff at emailSanta.com might email them regarding the issue using
+the given email.
+
 `stamp` - Chooses a graphical "stamp" on the letter. As this library
 removes any images in Santa's response, changing this does not have any
 effect in this library. The choice, as an integer, can be one of four
@@ -66,16 +80,6 @@ the picture would turn out!"
 Any other value will raise a ValueError.  
 Defaults to stamp `1`.
 
-`email` - The sender's email. If the sender appears to be in crisis,
-the staff at emailSanta.com might email them regarding the issue using
-the given email.
-
-`comment` - An additional message to Santa from the sender as a string.
-Defaults to empty.
-
-`consent` - Whether or not the sender consents to his/her comments
-being shared here: https://www.emailsanta.com/read_santa_letters.asp,
-as a boolean. Defaults to ``False`` (the letter will not be shared publicly.)
 
 For example:
 ```python
@@ -95,7 +99,7 @@ mySantaLetterToSend = SantaEmail(
 ```
 
 ### Getting a reply
-Once you have created your `SantaEmail` object, you can create a `SantaReply` object. Upon initialization of a `SantaReply`, it will automatically make a POST request to the emailsanta.com reply generator and save the response as a plaintext string, without any text formatting. The raw `Response` object created using the `requests` library is also available for you to process if desired. The website likes to use Unicode emojis, so make sure you use the encoding `utf-8` if necessary.
+Once you have created your `SantaEmail` object, you can create a `SantaReply` object. Upon initialization of a `SantaReply`, it will automatically make a POST request to the emailSanta.com reply generator and save the response as a plaintext string, without any text formatting. The raw `Response` object created using the `requests` library is also available for you to process if desired. The website likes to use Unicode emojis, so make sure you use the encoding `utf-8` if necessary.
 
 For example, to obtain a reply for the letter you created above, you could write the following code:
 
