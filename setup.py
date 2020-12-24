@@ -16,10 +16,17 @@ setup(
     author="Félix An",
     author_email="fffelix.jan.yt@gmail.com",
     python_requires=">= 3.5",
-        project_urls={
+    project_urls={
         "Documentation": GITHUB_URL,
         "Funding": "https://paypal.me/fffelixjan",
         "Source": GITHUB_URL,
         "Tracker": "{}/issues".format(GITHUB_URL),
     },
+    classifiers=[
+        "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+        "Programming Language :: Python :: 3",
+        "Operating System :: OS Independent",
+        "Topic :: Games/Entertainment",
+        "Topic :: Other/Nonlisted Topic",
+    ],
 )

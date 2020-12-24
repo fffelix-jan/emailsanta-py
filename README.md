@@ -12,6 +12,11 @@
  ```
  pip install emailsanta
  ```
+ 
+ On Linux, you might need to install additional libraries for lxml to function properly. On Debian and Ubuntu, install them using apt-get:
+ ```
+ sudo apt-get install libxml2-dev libxslt-dev python-dev
+```
 
  ## Usage
  The library provides two classes: `SantaEmail` and `SantaReply`. Simply import them like this:
