@@ -281,7 +281,7 @@ class SantaReply:
         self.rawResponse = _requests.post(_emailSantaReplyGen, data=userSendPOST)
 
         # Scrape the "letter" part of the webpage using BeautifulSoup
-        __soup = _BeautifulSoup(self.rawResponse.text, features="lxml")
+        __soup = _BeautifulSoup(self.rawResponse.text, features="html.parser")
 
         # Remove noprint div's
         for div in __soup.find_all("div", {"class": "noprint"}):

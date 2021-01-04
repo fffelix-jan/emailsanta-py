@@ -11,7 +11,7 @@ setup(
     description="Python module to simulate emailing the legendary Christmas character Santa, powered by Alan Kerr's emailSanta.com.",
     long_description=(pathlib.Path(__file__).parent / "README.md").read_text(),
     long_description_content_type="text/markdown",
-    install_requires=["bs4", "html2text", "lxml", "requests"],
+    install_requires=["bs4", "html2text", "requests"],
     url=GITHUB_URL,
     author="Félix An",
     author_email="fffelix.jan.yt@gmail.com",
