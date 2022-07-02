@@ -107,5 +107,5 @@ For example, to obtain a reply for the letter you created above, you could write
 ```python
 # continued from above
 myReplyFromSanta = SantaReply(mySantaLetterToSend)  # get your reply "from Santa"!
-print(mySantaLetterToSend.replyText)    # this prints the plaintext reply
+print(myReplyFromSanta.replyText)    # this prints the plaintext reply
 ```
